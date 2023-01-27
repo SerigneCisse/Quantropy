@@ -25,7 +25,7 @@ from matilda.data_pipeline.data_scapers.stock_prices_scraper import YahooFinance
 
 
 def get_atlas_db_url(username, password, dbname):
-    return f"mongodb+srv://{username}:{password}@cluster0.ptrie.mongodb.net/{dbname}?retryWrites=true&w=majority&" \
+    return f"mongodb+srv://{username}:{password}@cluster0.t54htyx.mongodb.net/{dbname}?retryWrites=true&w=majority&" \
            f"ssl=true"
 
 
