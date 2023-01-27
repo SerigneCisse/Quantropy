@@ -22,11 +22,10 @@ consumer = KafkaConsumer(
 
 
 def get_atlas_db_url(username, password, dbname):
-    return f"mongodb+srv://{username}:{password}@cluster0.ptrie.mongodb.net/{dbname}?retryWrites=true&w=majority&" \
+    return f"mongodb+srv://{username}:{password}@cluster0.t54htyx.mongodb.net/{dbname}?retryWrites=true&w=majority&" \
            f"ssl=true"
 
-
-atlas_url = get_atlas_db_url(username='AlainDaccache', password='qwerty98', dbname='matilda-db')
+atlas_url = get_atlas_db_url(username='sopcaja', password='Azerty98', dbname='matilda-db')
 db = connect(host=atlas_url)
 
 # The consumer iterator returns ConsumerRecords, which are simple namedtuples
