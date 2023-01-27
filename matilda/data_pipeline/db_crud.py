@@ -159,7 +159,10 @@ def populate_db_asset_prices(tickers: typing.List = None, from_date: datetime = 
 
 def populate_db_risk_factors(from_date=None, to_date=None):
     dir_path = f'{config.FACTORS_DIR_PATH}/pickle/'
-    scrape_Fama_French_factors()
+    #scrape_Fama_French_factors()
+    scrape_factors(
+        url='http://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/F-F_Research_Data_Factors_daily_CSV.zip',
+        skiprows=4, apply_fn=lambda x: x / 100, output_file_name='Fama-French 3 Factors')
     scrape_AQR_factors()
     for factor_model in os.listdir(path=dir_path):
         path = f'{dir_path}/{factor_model}'
