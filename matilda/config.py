@@ -37,7 +37,7 @@ parent_dir_path = os.path.abspath(os.path.join(dir_path, os.pardir))
 sys.path.insert(0, parent_dir_path)
 ROOT_DIR = parent_dir_path  # .../Quantropy
 
-DATA_DIR_PATH = os.path.join(ROOT_DIR, 'data')
+DATA_DIR_PATH = =  "mydata" #os.path.join(ROOT_DIR, 'data')
 
 MARKET_DATA_DIR_PATH = os.path.join(DATA_DIR_PATH, 'market_data')
 
